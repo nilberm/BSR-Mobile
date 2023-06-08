@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "BSR-Mobile",
+    "slug": "BSR-Mobile"
+  }
+}
