@@ -22,7 +22,7 @@ export default function SuccessfullyRegistered(
       <Pressable style={styles.button}>
         <CustomText
           style={styles.buttonText}
-          onPress={() => router.push("/home")}
+          onPress={() => router.push("home")}
         >
           Enter
         </CustomText>

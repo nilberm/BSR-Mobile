@@ -3,6 +3,7 @@ import Colors from "../../../../utils/colorPalette";
 
 export const styles = StyleSheet.create({
   formContainer: {
+    flex: 1,
     alignSelf: "stretch",
     gap: 20,
   },
@@ -32,7 +33,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 14,
-    backgroundColor: Colors.Gray300,
+    backgroundColor: Colors.Green300,
     overflow: "hidden",
     borderRadius: 100,
     alignSelf: "stretch",
@@ -41,6 +42,6 @@ export const styles = StyleSheet.create({
   },
 
   continueBtnText: {
-    color: Colors.Gray500,
+    color: Colors.Blue950,
   },
 });

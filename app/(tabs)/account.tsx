@@ -1,11 +1,11 @@
 import { View } from "react-native";
 import CustomText from "../../src/components/Tags/CustomText";
 
-interface ConfigProps {}
-export default function Config(props: ConfigProps) {
+interface AccountProps {}
+export default function Account(props: AccountProps) {
   return (
     <View>
-      <CustomText>Config</CustomText>
+      <CustomText>Account</CustomText>
     </View>
   );
 }

@@ -2,6 +2,21 @@ import { StyleSheet } from "react-native";
 import Colors from "../../../utils/colorPalette";
 
 export const styles = StyleSheet.create({
+  toasfity: {
+    flex: 1,
+    position: "relative",
+    top: -200,
+  },
+
+  toasfityText: {
+    paddingRight: 40,
+
+    display: "flex",
+    gap: 10,
+    maxWidth: 324,
+    height: 80,
+  },
+
   formContainer: {
     alignSelf: "stretch",
     gap: 20,
@@ -42,7 +57,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 14,
-    backgroundColor: Colors.Gray300,
+    backgroundColor: Colors.Green500,
     overflow: "hidden",
     borderRadius: 100,
     alignSelf: "stretch",
@@ -50,6 +65,17 @@ export const styles = StyleSheet.create({
   },
 
   continueBtnText: {
-    color: Colors.Gray500,
+    color: Colors.Zinc900,
+  },
+
+  loadingBtn: {
+    justifyContent: "center",
+    alignItems: "center",
+    paddingVertical: 14,
+    overflow: "hidden",
+    borderRadius: 100,
+    alignSelf: "stretch",
+    marginTop: 40,
+    backgroundColor: Colors.Gray500,
   },
 });
