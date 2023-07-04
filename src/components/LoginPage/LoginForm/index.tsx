@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { View, Text, TextInput, Pressable } from "react-native";
 import { styles } from "./style";
 import CustomText from "../../Tags/CustomText";
@@ -20,6 +20,14 @@ export default function LoginForm() {
 
   const [loading, setLoading] = useState(false);
 
+  const storeToken = async (token: string) => {
+    try {
+      await AsyncStorage.setItem("jwtToken", token);
+    } catch (error) {
+      console.log("Error to storage Token");
+    }
+  };
+
   const onSubmit = async (data) => {
     setLoading(true);
 
@@ -31,6 +39,7 @@ export default function LoginForm() {
     await api
       .post("login", request)
       .then((res) => {
+        storeToken(res.data.access_token);
         router.push("/home");
       })
       .catch((error) => {

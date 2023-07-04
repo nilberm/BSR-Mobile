@@ -1,26 +1,24 @@
-import { Pressable, Image, Text, View } from "react-native";
-import Colors from "../../utils/colorPalette";
 import * as SplashScreen from "expo-splash-screen";
+import { Image, Pressable, Text, View } from "react-native";
 
 import {
-  useFonts,
-  Roboto_400Regular,
   Righteous_400Regular,
+  Roboto_400Regular,
+  useFonts,
 } from "@expo-google-fonts/dev";
 import { useCallback, useEffect } from "react";
-import { useRouter } from "expo-router";
 import { styles } from "./styles";
+import { useRouter } from "expo-router";
 
 export default function WelcomePage() {
+  const router = useRouter();
+
   let [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Righteous_400Regular,
   });
 
   useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
     prepare();
   }, []);
 
@@ -30,9 +28,11 @@ export default function WelcomePage() {
     }
   }, [fontsLoaded]);
 
-  const router = useRouter();
-
   if (!fontsLoaded) return null;
+
+  async function prepare() {
+    await SplashScreen.preventAutoHideAsync();
+  }
 
   return (
     <View style={styles.container} onLayout={onLayout}>
