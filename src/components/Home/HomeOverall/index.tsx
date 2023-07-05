@@ -3,9 +3,12 @@ import { styles } from "./style";
 import CustomText from "../../Tags/CustomText";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
+import { useRouter } from "expo-router";
 
 interface HomeOverallProps {}
 export default function HomeOverall(props: HomeOverallProps) {
+  const route = useRouter();
+
   const [showBalance, setShowBalance] = useState(true);
 
   return (
@@ -44,7 +47,10 @@ export default function HomeOverall(props: HomeOverallProps) {
         <CustomText style={styles.accountBalance}>R$ 0,00</CustomText>
       </View>
 
-      <TouchableOpacity style={styles.manageAccountBtn}>
+      <TouchableOpacity
+        style={styles.manageAccountBtn}
+        onPress={() => route.push("home/manageAccounts")}
+      >
         <CustomText style={styles.managerAccountText}>
           Manage accounts
         </CustomText>
