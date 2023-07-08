@@ -12,9 +12,12 @@ import CustomText from "../../../Tags/CustomText";
 import { useEffect, useRef, useState } from "react";
 import Colors from "../../../../utils/colorPalette";
 import { Controller, useForm } from "react-hook-form";
+import { useRouter } from "expo-router";
 
 interface ManageAccountsCardsProps {}
 export default function ManageAccountsCards(props: ManageAccountsCardsProps) {
+  const route = useRouter();
+
   const {
     control,
     handleSubmit,
@@ -37,7 +40,10 @@ export default function ManageAccountsCards(props: ManageAccountsCardsProps) {
     <View style={styles.container}>
       <View style={styles.cards}>
         <View style={styles.card}>
-          <TouchableOpacity style={styles.topperCard}>
+          <TouchableOpacity
+            style={styles.topperCard}
+            onPress={() => route.push("home/manageAccounts/editAccountModal")}
+          >
             <View style={styles.iconAndName}>
               <View style={styles.iconAccount}>
                 <Ionicons name="wallet-outline" size={20} color="black" />

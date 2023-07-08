@@ -1,7 +1,7 @@
 import { ScrollView } from "react-native";
 
-import ManageAccountsHeader from "../../../src/components/Home/ManageAccounts/ManageAccountsHeader";
-import ManageAccountsCards from "../../../src/components/Home/ManageAccounts/ManageAccountsCards";
+import ManageAccountsHeader from "../../../../src/components/Home/ManageAccounts/Header";
+import ManageAccountsCards from "../../../../src/components/Home/ManageAccounts/Cards";
 
 interface ManageAccountsProps {}
 export default function ManageAccounts(props: ManageAccountsProps) {

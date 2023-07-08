@@ -49,7 +49,7 @@ export default function HomeOverall(props: HomeOverallProps) {
 
       <TouchableOpacity
         style={styles.manageAccountBtn}
-        onPress={() => route.push("home/manageAccounts")}
+        onPress={() => route.push("home/manageAccounts/")}
       >
         <CustomText style={styles.managerAccountText}>
           Manage accounts

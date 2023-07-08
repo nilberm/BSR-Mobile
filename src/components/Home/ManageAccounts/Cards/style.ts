@@ -83,7 +83,7 @@ export const styles = StyleSheet.create({
 
   editBalance: {},
 
-  // --- Modal ---
+  // --- Modal Edit Balance ---
   modalEditBalance: {
     flex: 1,
     backgroundColor: "#00000099",
